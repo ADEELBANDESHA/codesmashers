@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="contactsection1">
+        <div class="logo">
+            <a href="/">CodeSmashers</a>
+            <h3>Learn Coding with us</h3>
+        </div>
+        <label id="icon" onclick="ToggleMenu()">
+            <i class="fas fa-bars"></i>
+        </label>
+        <nav id="navbar">
+            <ul id="manu">
+                <li class="item"><a href="/">HOME</a></li>
+                <li class="item"><a href="/about">ABOUT</a></li>
+                <li class="item"><a href="/blog">BLOG</a></li>
+                <li class="item"><a href="/contact">CONTACT</a></li>
+                </u>
+        </nav>
+        <h1>Contact</h1>
+    </section>
+
+    <section id="contactsection2">
+        <form method="POST" action="/contact" id="form" type="submit">
+            <div id="forminput">
+                <input type="text" name="Fname" placeholder="First Name">
+                <input type="text" name="Lname" placeholder="Last Name">
+                <input type="text" name="subject" placeholder="subject">
+                <textarea class="inputtext" name="message" id="massege" cols="30" rows="10"
+                    placeholder="Your Massege"></textarea>
+            </div>
+            <button class="btn">Send Massege</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <nav id="navfooter">
+            <ul id="manu">
+                <li class="item"><a href="/">HOME</a></li>
+                <li class="item"><a href="/about">ABOUT</a></li>
+                <li class="item"><a href="/blog">BLOG</a></li>
+                <li class="item"><a href="/contact">CONTACT</a></li>
+                </u>
+        </nav>
+        <div class="social_icons">
+            <img src="img/twiter.png" alt="twiter" class="social">
+            <img src="img/facobook.jpg" alt="facebook" class="social">
+            <img src="img/instagram.png" alt="instagram" class="social">
+            <img src="img/youtube.png " alt="youtube" class="youtube">
+        </div>
+    </footer>
+    <hr>
+    <h4 class="copyright">Copyright@ <a href="/">CodeSmashers</a> | All rights reserved!</h4>
+
+
+    <script>
+        let menu = document.getElementById('manu');
+
+        function ToggleMenu() {
+            if (menu.style.display == "none") {
+                menu.style.display = "block";
+            }
+            else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

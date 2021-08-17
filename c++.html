@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming</title>
+    <link rel="stylesheet" href="css/c++.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="logo">
+        <a href="/">CodeSmashers</a>
+        <h3>Learn Coding with us</h3>
+    </div>
+    <label id="icon" onclick="ToggleMenu()">
+        <i class="fas fa-bars"></i>
+    </label>
+    <nav id="navbar">
+        <ul id="manu">
+            <li class="item"><a href="/">HOME</a></li>
+            <li class="item"><a href="/about">ABOUT</a></li>
+            <li class="item"><a href="/blog">BLOG</a></li>
+            <li class="item"><a href="/contact">CONTACT</a></li>
+        </u>
+    </nav>
+    <div class="cpost">
+        <img src="img/cimage.jpg" alt="C++">
+        <h2>C++ Programming</h2>
+        <h4><a href="#">Leave a comment</a> / <a href="#">Programming</a> / by <a href="#">admin</a></h4>
+        <p>C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++
+            runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This C++ tutorial
+            adopts a simple and practical approach to describe the concepts of C++ for beginners to advanded software
+            engineers.</p>
+
+        <div class="why_to_learn">
+            <h1>Why to learn C++:</h1>
+            <p>C++ is a MUST for students and working professionals to become a great Software Engineer. I will list
+                down some of the key advantages of learning C++:</p>
+
+            <ul>
+                <li>C++ is very close to hardware, so you get a chance to work at a low level which gives you lot of
+                    control in terms of memory management, better performance and finally a robust software development.
+                </li>
+                <li>C++ programming gives you a clear understanding about Object Oriented Programming. You will
+                    understand low level implementation of polymorphism when you will implement virtual tables and
+                    virtual table pointers, or dynamic type identification.</li>
+                <li>C++ is one of the every green programming languages and loved by millions of software developers. If
+                    you are a great C++ programmer then you will never sit without work and more importantly you will
+                    get highly paid for your work.</li>
+                <li>C++ is the most widely used programming languages in application and system programming. So you can
+                    choose your area of interest of software development.</li>
+                <li>C++ really teaches you the difference between compiler, linker and loader, different data types,
+                    storage classes, variable types their scopes etc.</li>
+            </ul>
+            <p>There are 1000s of good reasons to learn C++ Programming. But one thing for sure, to learn any
+                programming language, not only C++, you just need to code, and code and finally code until you become
+                expert.</p>
+            <h1>Hallo World Using C++:</h1>
+            <p>C++ is a super set of C programming with additional implementation of object-oriented concepts.
+
+                Just to give you a little excitement about C++ programming, I’m going to give you a small conventional
+                C++ Hello World program.</p>
+            <h1>Simple C++ Hallo World Program:</h1>
+            <div class="program">
+                #include "iostream"
+                <br> using namespace std; <br>
+
+                // main() is where program execution begins. <br>
+                int main() { <br>
+                cout << "Hello World" ; // prints Hello World. <br>
+                    return 0; <br>
+                    } <br>
+            </div>
+            <section id="app">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="comment">
+                                <p v-for="items in item" v-text="items"></p>
+                            </div>
+                            <!--End Comment-->
+                        </div>
+                        <!--End col -->
+                    </div><!-- End row -->
+                    <div class="row">
+                        <div class="col-6">
+                            <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem"
+                                @keyup.enter="addItem()"></textarea>
+                            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add
+                                Comment</button>
+                        </div><!-- End col -->
+                    </div>
+                    <!--End Row -->
+                </div>
+                <!--End Container -->
+            </section><!-- end App -->
+        </div>
+    </div>
+
+    <footer>
+        <nav id="navfooter">
+            <ul id="manu">
+                <li class="item"><a href="/">HOME</a></li>
+                <li class="item"><a href="/about">ABOUT</a></li>
+                <li class="item"><a href="/blog">BLOG</a></li>
+                <li class="item"><a href="/contact">CONTACT</a></li>
+            </u>
+        </nav>
+        <div class="social_icons">
+            <img src="img/twiter.png" alt="twiter" class="social">
+            <img src="img/facobook.jpg" alt="facebook" class="social">
+            <img src="img/instagram.png" alt="instagram" class="social">
+            <img src="img/youtube.png " alt="youtube" class="youtube">
+        </div>
+    </footer>
+    <hr>
+    <h4 class="copyright">Copyright@ <a href="/">CodeSmashers</a> | All rights reserved!</h4>
+
+
+
+
+    <!-- Vue JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".primaryContained").on('click', function () {
+                $(".comment").addClass("commentClicked");
+            });//end click
+            $("textarea").on('keyup.enter', function () {
+                $(".comment").addClass("commentClicked");
+            });//end keyup
+        });//End Function
+
+        new Vue({
+            el: "#app",
+            data: {
+                title: 'Add a comment',
+                newItem: '',
+                item: [],
+            },
+            methods: {
+                addItem() {
+                    this.item.push(this.newItem);
+                    this.newItem = "";
+                }
+            }
+
+        });
+    </script>
+
+    <script>
+        let menu = document.getElementById('manu');
+
+        function ToggleMenu(){
+            if(menu.style.display == "none"){
+                menu.style.display = "block";
+            }
+            else{
+                menu.style.display = "none"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

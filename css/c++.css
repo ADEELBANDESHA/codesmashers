@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Roboto+Condensed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo a{
+    font-size: 33px;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+    font-family: 'Raleway', sans-serif;
+    
+}
+#logo h3{
+    position: absolute;
+    color: black;
+    
+}
+#logo{
+    position: absolute;
+    margin: 26px 56px;
+}
+
+#icon{
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#navbar ul li{
+    list-style: none;
+    
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+#navbar ul li a:hover{
+    color: yellow;
+    transition: ease-out;
+}
+
+.cpost{
+    margin-top: 210px;
+    margin-left: 185px;
+}
+.cpost h2{
+    margin-top: 24px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+.cpost h4{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.cpost a{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+.cpost a:hover{
+    color: red;
+}
+
+.cpost p{
+    margin-top: 40px;
+    width: 96%;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.why_to_learn{
+    width: 80%;
+}
+.why_to_learn h1{
+    margin-top: 25px;
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.why_to_learn ul{
+    margin-top: 25px; 
+    margin-left: 50px;  
+}
+.why_to_learn ul li{
+    font-size: 20px;  
+
+}
+
+.container {
+	max-width: 640px;
+	margin: 30px auto;
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.comment {
+	display: block;
+	transition: all 1s;
+}
+.commentClicked {
+	min-height: 0px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: 5px 10px
+}
+
+.container textarea {
+	width: 100%;
+	border: none;
+	background: #E8E8E8;
+	padding: 5px 10px;
+	height: 50%;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 2px solid #016BA8;
+	transition: all 0.5s;
+	margin-top: 15px;
+}
+
+button.primaryContained {
+	background: #016ba8;
+	color: #fff;
+	padding: 10px 10px;
+	border: none;
+	margin-top: 0px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	transition: 1s all;
+	font-size: 10px;
+	border-radius: 5px;
+}
+
+button.primaryContained:hover {
+	background: #9201A8;
+}
+
+
+footer{
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+
+#navfooter ul{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    float: right;
+}
+#navfooter ul li{
+    list-style: none;
+}
+#navfooter ul li a{
+    text-decoration: none;
+    padding: 0px 17px;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+#navfooter ul li a:hover{
+    color: green;
+}
+
+.social_icons{
+    position: absolute;
+    float: right;
+    margin-top: 30px;
+    right: 10px;
+}
+.social_icons img{
+    margin: 35px 0px;
+    margin-right: 45px;
+    cursor: pointer;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.social_icons img:hover{
+    filter: contrast();
+}
+
+.social{
+    width: 20px;
+    height: 20px;
+}
+
+.youtube{
+    height: 28px;
+    width: 30px;
+}
+
+.copyright{
+    font-size: 18px;
+    align-items: center;
+    padding: 10px 0px;
+    text-align: center;
+
+}
+.copyright a{
+    color: black;
+    text-decoration: none;
+
+}
+.copyright a:hover{
+    color: red;
+
+}
+
+
+@media(max-width: 1006px){
+    #icon{
+        display: block;
+        margin-top: 53px;
+        margin-right: 42px;
+        font-size: 60px;
+
+    }
+
+    #navbar ul{
+        padding-top: 115px;
+        display: flex;
+        display: inline-block;
+        margin-left: 40px;
+        margin-top: 75px;
+    }
+    #navbar ul li a{
+        font-size: 25px;
+        font-weight: bold;
+        margin: 1px 12px;
+        line-height: 54px;
+        color: black;
+        font-size: 30px;
+
+    }
+
+    .cpost {
+        margin-top: 19px;
+        margin-left: 56px;
+        padding-top: 200px;
+    }
+
+    .cpost p {
+        margin-top: 40px;
+        width: 100%;
+        font-size: 20px;
+    }
+    
+
+
+}
+

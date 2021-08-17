@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python programming</title>
+    <link rel="stylesheet" href="css/python.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="logo">
+        <a href="/">CodeSmashers</a>
+        <h3>Learn Coding with us</h3>
+    </div>
+    <label id="icon" onclick="ToggleMenu()">
+        <i class="fas fa-bars"></i>
+    </label>
+    <nav id="navbar">
+        <ul id="manu">
+            <li class="item"><a href="/">HOME</a></li>
+            <li class="item"><a href="/about">ABOUT</a></li>
+            <li class="item"><a href="/blog">BLOG</a></li>
+            <li class="item"><a href="/contact">CONTACT</a></li>
+        </u>
+    </nav>
+    <div class="python">
+        <img src="img/pythonimage.jpg" alt="python">
+        <h2>Pyhton Programming</h2>
+        <h4><a href="#">Leave a comment</a> / <a href="#">Programming</a> / by <a href="#">admin</a></h4>
+        <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+        <p>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.</p>
+        <p>The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.</p>
+        <p>This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.</p>
+        <p>For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API Reference Manual. There are also several books covering Python in depth.</p>
+        <p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.</p>
+
+        <section id="app">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="comment">
+                            <p v-for="items in item" v-text="items"></p>
+                        </div>
+                        <!--End Comment-->
+                    </div>
+                    <!--End col -->
+                </div><!-- End row -->
+                <div class="row">
+                    <div class="col-6">
+                        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem"
+                            @keyup.enter="addItem()"></textarea>
+                        <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add
+                            Comment</button>
+                    </div><!-- End col -->
+                </div>
+                <!--End Row -->
+            </div>
+            <!--End Container -->
+        </section><!-- end App -->
+    </div>
+
+    <footer>
+        <nav id="navfooter">
+            <ul id="manu">
+                <li class="item"><a href="/">HOME</a></li>
+                <li class="item"><a href="/about">ABOUT</a></li>
+                <li class="item"><a href="/blog">BLOG</a></li>
+                <li class="item"><a href="/contact">CONTACT</a></li>
+            </u>
+        </nav>
+        <div class="social_icons">
+            <img src="img/twiter.png" alt="twiter" class="social">
+            <img src="img/facobook.jpg" alt="facebook" class="social">
+            <img src="img/instagram.png" alt="instagram" class="social">
+            <img src="img/youtube.png " alt="youtube" class="youtube">
+        </div>
+    </footer>
+    <hr>
+    <h4 class="copyright">Copyright@ <a href="/">CodeSmashers</a> | All rights reserved!</h4>
+
+     <!-- Vue JS -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+     <!-- jQuery -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+     <script>
+         $(document).ready(function () {
+ 
+             $(".primaryContained").on('click', function () {
+                 $(".comment").addClass("commentClicked");
+             });//end click
+             $("textarea").on('keyup.enter', function () {
+                 $(".comment").addClass("commentClicked");
+             });//end keyup
+         });//End Function
+ 
+         new Vue({
+             el: "#app",
+             data: {
+                 title: 'Add a comment',
+                 newItem: '',
+                 item: [],
+             },
+             methods: {
+                 addItem() {
+                     this.item.push(this.newItem);
+                     this.newItem = "";
+                 }
+             }
+ 
+         });
+     </script>
+
+     <script>
+         let menu = document.getElementById('manu');
+
+         function ToggleMenu(){
+             if(menu.style.display == "none"){
+                 menu.style.display = "block";
+             }
+             else{
+                 menu.style.display = "none"
+             }
+         }
+     </script>
+
+</body>
+
+</html>
